@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "66068326539",
+    "project_id": "tctodo-9ebdc",
+    "storage_bucket": "tctodo-9ebdc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:66068326539:android:d99f80ac41a6262179cc8e",
+        "android_client_info": {
+          "package_name": "com.tc.todo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCOHWov0fXw2NQKbn-tFmW-rcDKDaDd-3o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
