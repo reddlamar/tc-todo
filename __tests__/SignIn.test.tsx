@@ -1,6 +1,7 @@
 import {render, screen, userEvent} from '@testing-library/react-native';
 import React from 'react';
 import {SignInScreen} from '../src/screens/index.screens';
+// import {FirebaseAuthTypes} from '@react-native-firebase/auth';
 
 test('Should show Text that says "Sign In"', () => {
   render(<SignInScreen />);
@@ -70,4 +71,13 @@ test('Should see a button with the text "Sign In"', () => {
   const button = screen.getByRole('button', {name: 'signIn'});
   const expectedType = 'signIn';
   expect(button.props.accessibilityLabel).toBe(expectedType);
+});
+
+test('Should get user after signing in', async () => {
+  render(<SignInScreen />);
+  const button = screen.getByRole('button', {name: 'signIn'});
+  const user = userEvent.setup();
+  await user.press(button);
+  const expected = 'User';
+  expect('').toBe(expected);
 });

@@ -39,7 +39,8 @@ const SignIn = (props: SignInProps) => {
         <Pressable
           style={styles.button}
           accessibilityLabel="signIn"
-          accessibilityRole="button">
+          accessibilityRole="button"
+          onPress={() => onChangePassword('123456')}>
           <Text style={styles.buttonText}>Sign In</Text>
         </Pressable>
       </View>
