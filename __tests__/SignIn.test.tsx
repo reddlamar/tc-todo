@@ -64,3 +64,10 @@ test('Should change text of TextInput component for password', async () => {
   const actualInput = textInput.props.value;
   expect(actualInput).toBe(expectedInput);
 });
+
+test('Should see a button with the text "Sign In"', () => {
+  render(<SignInScreen />);
+  const button = screen.getByRole('button', {name: 'signIn'});
+  const expectedType = 'signIn';
+  expect(button.props.accessibilityLabel).toBe(expectedType);
+});

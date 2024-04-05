@@ -36,7 +36,10 @@ const SignIn = (props: SignInProps) => {
             testID="passwordInput"
           />
         </View>
-        <Pressable style={styles.button}>
+        <Pressable
+          style={styles.button}
+          accessibilityLabel="signIn"
+          accessibilityRole="button">
           <Text style={styles.buttonText}>Sign In</Text>
         </Pressable>
       </View>

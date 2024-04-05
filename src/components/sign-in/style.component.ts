@@ -41,6 +41,8 @@ export const styles = StyleSheet.create({
     borderRadius: 6,
     justifyContent: 'center',
     alignItems: 'center',
+    borderWidth: 1,
+    borderColor: 'gold',
   },
   buttonText: {
     color: 'gold',
