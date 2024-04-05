@@ -1,9 +1,9 @@
 import {render, screen, userEvent} from '@testing-library/react-native';
 import React from 'react';
-import SignIn from '../src/components/sign-in/index.component';
+import {SignInScreen} from '../src/screens/index.screens';
 
 test('Should show Text that says "Sign In"', () => {
-  render(<SignIn />);
+  render(<SignInScreen />);
   const text = screen.getByText('Sign In');
   const expectedType = 'Text';
   const actualType = text.type;
@@ -14,7 +14,7 @@ test('Should show Text that says "Sign In"', () => {
 });
 
 test('Should show Text that says "Email"', () => {
-  render(<SignIn />);
+  render(<SignInScreen />);
   const text = screen.getByText('Email');
   const expectedText = 'Email';
   const actualText = text.children[0];
@@ -25,7 +25,7 @@ test('Should show Text that says "Email"', () => {
 });
 
 test('Should show a TextInput component for email', () => {
-  render(<SignIn />);
+  render(<SignInScreen />);
   const textInput = screen.getByTestId('emailInput');
   const expectedType = 'TextInput';
   const actualType = textInput.type;
@@ -33,7 +33,7 @@ test('Should show a TextInput component for email', () => {
 });
 
 test('Should change text of TextInput component for email', async () => {
-  render(<SignIn />);
+  render(<SignInScreen />);
   const textInput = screen.getByTestId('emailInput');
   const user = userEvent.setup();
   await user.clear(textInput);
@@ -44,7 +44,7 @@ test('Should change text of TextInput component for email', async () => {
 });
 
 test('Should show Text that says "Password"', () => {
-  render(<SignIn />);
+  render(<SignInScreen />);
   const text = screen.getByText('Password');
   const expectedText = 'Password';
   const actualText = text.children[0];
@@ -55,7 +55,7 @@ test('Should show Text that says "Password"', () => {
 });
 
 test('Should change text of TextInput component for password', async () => {
-  render(<SignIn />);
+  render(<SignInScreen />);
   const textInput = screen.getByTestId('passwordInput');
   const user = userEvent.setup();
   await user.clear(textInput);

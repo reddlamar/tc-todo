@@ -1,13 +1,12 @@
 import {Pressable, StyleSheet, Text, TextInput, View} from 'react-native';
-import React, {useState} from 'react';
+import React from 'react';
+import {SignInProps} from '../../model/types.model';
 
-const SignIn = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+const SignIn = (props: SignInProps) => {
+  const {email, onChangeEmail, password, onChangePassword} = props;
 
   return (
     <View style={styles.view}>
-      {/* <Text style={[styles.text, styles.title]}>Sign In</Text> */}
       <View style={styles.inputView}>
         <View style={styles.inputInnerView}>
           <View style={styles.labelView}>
@@ -15,7 +14,7 @@ const SignIn = () => {
           </View>
           <TextInput
             value={email}
-            onChangeText={setEmail}
+            onChangeText={onChangeEmail}
             textContentType="emailAddress"
             autoCapitalize="none"
             style={styles.textInput}
@@ -28,7 +27,7 @@ const SignIn = () => {
           </View>
           <TextInput
             value={password}
-            onChangeText={setPassword}
+            onChangeText={onChangePassword}
             textContentType="password"
             secureTextEntry
             autoCapitalize="none"
