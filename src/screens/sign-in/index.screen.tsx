@@ -1,6 +1,7 @@
-import {StyleSheet, View} from 'react-native';
+import {View} from 'react-native';
 import React, {useState} from 'react';
 import SignIn from '../../components/sign-in/index.component';
+import {styles} from './style.screen';
 
 const SignInScreen = () => {
   const [email, setEmail] = useState('');
@@ -19,7 +20,3 @@ const SignInScreen = () => {
 };
 
 export default SignInScreen;
-
-const styles = StyleSheet.create({
-  view: {flex: 1, backgroundColor: 'white'},
-});
