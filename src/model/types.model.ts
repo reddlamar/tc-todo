@@ -5,3 +5,10 @@ export type SignInProps = {
   onChangePassword: (value: string) => void;
   handleSignIn: (email: string, password: string) => void;
 };
+
+export type Task = {
+  id?: number;
+  userId: number;
+  title: string;
+  completed: boolean;
+};

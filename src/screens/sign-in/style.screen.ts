@@ -1,4 +1,6 @@
 import {StyleSheet} from 'react-native';
+import {MD2Colors} from 'react-native-paper';
+import {verticalScale, moderateScale, scale} from 'react-native-size-matters';
 
 export const styles = StyleSheet.create({
   view: {
@@ -10,10 +12,35 @@ export const styles = StyleSheet.create({
   appNameView: {
     justifyContent: 'center',
     alignItems: 'center',
-    marginTop: 12,
-    rowGap: 9,
+    marginTop: verticalScale(12),
+    rowGap: verticalScale(9),
     flex: 1,
+    paddingHorizontal: scale(3),
   },
-  title: {fontSize: 30, fontWeight: 'bold'},
-  appDescription: {fontSize: 24, fontWeight: '600', textAlign: 'center'},
+  title: {fontSize: moderateScale(30), fontWeight: 'bold'},
+  titleView: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    columnGap: scale(6),
+  },
+  appDescription: {
+    fontSize: moderateScale(24),
+    fontWeight: '600',
+    textAlign: 'center',
+  },
+  lr: {color: MD2Colors.red600},
+  to: {color: MD2Colors.green600},
+  do: {color: MD2Colors.black},
+  signUpView: {
+    flexDirection: 'row',
+  },
+  signUpText: {
+    fontSize: moderateScale(15),
+    fontWeight: '600',
+  },
+  signUp: {
+    color: MD2Colors.blue600,
+    textDecorationLine: 'underline',
+  },
 });

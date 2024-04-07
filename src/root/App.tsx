@@ -7,10 +7,11 @@
 
 import React from 'react';
 // , {useEffect}
-import {SafeAreaView, StatusBar} from 'react-native';
-import {SignInScreen} from '../screens/index.screens';
-// import auth from '@react-native-firebase/auth';
 import {styles} from './style';
+import {SafeAreaView, StatusBar} from 'react-native';
+import {NavigationContainer} from '@react-navigation/native';
+import Navigation from '../navigation/index.navigation';
+// import auth from '@react-native-firebase/auth';
 // import {useUserStore} from '../services/state-manager/zustand/store/user.store';
 
 function App(): React.JSX.Element {
@@ -28,7 +29,9 @@ function App(): React.JSX.Element {
   return (
     <SafeAreaView style={[styles.safeView]}>
       <StatusBar />
-      <SignInScreen />
+      <NavigationContainer>
+        <Navigation />
+      </NavigationContainer>
     </SafeAreaView>
   );
 }

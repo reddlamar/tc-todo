@@ -10,10 +10,16 @@ import App from '../src/root/App';
 import {it} from '@jest/globals';
 
 // Note: test renderer must be required after react-native.
-import renderer from 'react-test-renderer';
+import renderer, {act} from 'react-test-renderer';
 
 jest.mock('react-native/Libraries/EventEmitter/NativeEventEmitter');
 
-it('renders correctly', () => {
-  renderer.create(<App />);
+describe('Rendering App', () => {
+  it('renders correctly', async () => {
+    let wrapper: any;
+    await act(async () => {
+      wrapper = renderer.create(<App />);
+    });
+    expect(wrapper.toJSON()).toMatchSnapshot();
+  });
 });
