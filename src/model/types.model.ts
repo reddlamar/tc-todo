@@ -3,4 +3,5 @@ export type SignInProps = {
   onChangeEmail: (value: string) => void;
   password: string;
   onChangePassword: (value: string) => void;
+  handleSignIn: (email: string, password: string) => void;
 };

@@ -1,18 +1,18 @@
 import {Pressable, Text, TextInput, View} from 'react-native';
 import React from 'react';
 import {SignInProps} from '../../model/types.model';
-import {signInWithEmailAndPassword} from '../../services/firestore/auth.firestore';
 import {styles} from './style.component';
 
 const SignIn = (props: SignInProps) => {
-  const {email, onChangeEmail, password, onChangePassword} = props;
+  const {email, onChangeEmail, password, onChangePassword, handleSignIn} =
+    props;
 
   return (
     <View style={styles.view}>
       <View style={styles.inputView}>
         <View style={styles.inputInnerView}>
           <View style={styles.labelView}>
-            <Text style={[styles.text, styles.label]}>Email</Text>
+            <Text style={styles.label}>Email</Text>
           </View>
           <TextInput
             value={email}
@@ -25,7 +25,7 @@ const SignIn = (props: SignInProps) => {
         </View>
         <View style={styles.inputInnerView}>
           <View style={styles.labelView}>
-            <Text style={[styles.text, styles.label]}>Password</Text>
+            <Text style={styles.label}>Password</Text>
           </View>
           <TextInput
             value={password}
@@ -41,7 +41,7 @@ const SignIn = (props: SignInProps) => {
           style={styles.button}
           accessibilityLabel="signIn"
           accessibilityRole="button"
-          onPress={() => signInWithEmailAndPassword(email, password)}>
+          onPress={() => handleSignIn(email, password)}>
           <Text style={styles.buttonText}>Sign In</Text>
         </Pressable>
       </View>
