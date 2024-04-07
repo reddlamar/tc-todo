@@ -7,3 +7,7 @@ export interface TodoState {
   updateTask: (task: Task) => void;
   deleteTask: (task: Task) => void;
 }
+
+export interface TodoFormProps {
+  task: Task | null;
+}
