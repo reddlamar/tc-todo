@@ -12,3 +12,11 @@ export const signInWithEmailAndPassword = async (
     console.log('Sign In With Email and Password Error:', error);
   }
 };
+
+export const signOut = async () => {
+  try {
+    await auth().signOut();
+  } catch (error) {
+    console.log('Sign Out Error:', error);
+  }
+};

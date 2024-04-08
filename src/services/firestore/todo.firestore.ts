@@ -48,7 +48,7 @@ export const deleteFromTaskCollection = async (id: string | undefined) => {
       await firebase.firestore().collection('Tasks').doc(id).delete();
       return true;
     }
-    throw Error('Cannot delete task.');
+    throw Error(`Cannot delete task. invalid ID: ${id}`);
   } catch (error) {
     console.log('Delete Task Error:', error);
     return false;

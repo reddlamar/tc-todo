@@ -5,10 +5,14 @@ export interface TodoState {
   isLoading: boolean;
   addTask: (task: Task) => void;
   getTasks: (userId: string) => void;
-  updateTask: (task: Task) => Promise<string>;
-  deleteTask: (task: Task) => Promise<string>;
+  updateTask: (task: Task) => void;
+  deleteTask: (id: string) => void;
 }
 
 export interface TodoFormProps {
   task: Task | null;
+}
+
+export interface TodoListProps {
+  tasks: Task[];
 }

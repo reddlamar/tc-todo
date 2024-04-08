@@ -82,7 +82,11 @@ const TodoScreen = () => {
   };
 
   if (isLoading) {
-    return <ActivityIndicator color={MD2Colors.blue600} />;
+    return (
+      <View style={styles.loadingView}>
+        <ActivityIndicator color={MD2Colors.blue600} />
+      </View>
+    );
   }
 
   return (

@@ -1,8 +1,8 @@
 import React, {useCallback} from 'react';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import {SignInScreen, TodoScreen, screenNames} from '../screens/index.screens';
+import {SignInScreen, screenNames} from '../screens/index.screens';
 import {useUserStore} from '../services/state-manager/zustand/store/user.store';
-
+import Tabs from './tabs/index.navigation';
 const Stack = createNativeStackNavigator();
 
 const Navigation = () => {
@@ -12,7 +12,7 @@ const Navigation = () => {
     if (user) {
       return (
         <Stack.Group>
-          <Stack.Screen name={screenNames.todo} component={TodoScreen} />
+          <Stack.Screen name={'Tabs'} component={Tabs} />
         </Stack.Group>
       );
     }

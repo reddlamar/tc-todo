@@ -13,20 +13,12 @@ export const useTodoStore = create<TodoState>()(set => ({
   tasks: [],
   isLoading: false,
   addTask: async (task: Task) => {
-    set(() => ({
-      isLoading: true,
-    }));
-
     const isSuccess: boolean = await addToTasks(task);
     if (isSuccess) {
       set(state => ({
         tasks: [...state.tasks, task],
       }));
     }
-
-    set(() => ({
-      isLoading: false,
-    }));
   },
   getTasks: async (userId: string) => {
     set(() => ({
@@ -44,7 +36,7 @@ export const useTodoStore = create<TodoState>()(set => ({
       isLoading: false,
     }));
   },
-  updateTask: async (task: Task): Promise<string> => {
+  updateTask: async (task: Task): Promise<void> => {
     set(() => ({
       isLoading: true,
     }));
@@ -55,31 +47,27 @@ export const useTodoStore = create<TodoState>()(set => ({
         const updatedTasks = update(state, task);
         return {tasks: updatedTasks};
       });
-      return '';
     }
 
     set(() => ({
       isLoading: false,
     }));
-    return 'I cannot update your tasks.';
   },
-  deleteTask: async (task: Task) => {
+  deleteTask: async (id: string) => {
     set(() => ({
       isLoading: true,
     }));
 
-    const isDeleted = await deleteFromTaskCollection(task.id);
+    const isDeleted = await deleteFromTaskCollection(id);
     if (isDeleted) {
       set(state => {
-        const filteredTasks = state.tasks.filter(t => t.id !== task.id);
+        const filteredTasks = state.tasks.filter(t => t.id !== id);
         return {tasks: filteredTasks};
       });
-      return '';
     }
 
     set(() => ({
       isLoading: false,
     }));
-    return `I cannot delete this task, ${task.title}`;
   },
 }));
