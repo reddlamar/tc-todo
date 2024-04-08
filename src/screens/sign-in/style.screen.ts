@@ -5,7 +5,7 @@ import {verticalScale, moderateScale, scale} from 'react-native-size-matters';
 export const styles = StyleSheet.create({
   view: {
     flex: 1,
-    backgroundColor: 'lightgrey',
+    backgroundColor: MD2Colors.white,
     justifyContent: 'center',
     alignItems: 'center',
   },

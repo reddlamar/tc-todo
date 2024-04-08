@@ -24,7 +24,7 @@ const SignInScreen = () => {
           <Text style={[styles.do, styles.title]}>Do</Text>
         </View>
         <Text style={styles.appDescription}>
-          This app that will help you manage your tasks.
+          The app that will help you manage your tasks.
         </Text>
         <View style={styles.signUpView}>
           <Pressable>
