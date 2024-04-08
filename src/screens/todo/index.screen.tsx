@@ -1,4 +1,4 @@
-import {View, Text} from 'react-native';
+import {View, Text, ActivityIndicator} from 'react-native';
 import React, {useEffect, useState} from 'react';
 import {MD2Colors} from 'react-native-paper';
 import {styles} from './style.screen';
@@ -13,7 +13,7 @@ const dayOfWeek = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 
 const TodoScreen = () => {
   const [open, setOpen] = useState(false);
-  const {tasks, getTasks} = useTodoStore();
+  const {tasks, getTasks, isLoading} = useTodoStore();
   const {user} = useUserStore();
 
   useEffect(() => {
@@ -80,6 +80,10 @@ const TodoScreen = () => {
       </View>
     );
   };
+
+  if (isLoading) {
+    return <ActivityIndicator color={MD2Colors.blue600} />;
+  }
 
   return (
     <>

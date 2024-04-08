@@ -38,6 +38,7 @@ const TodoForm = ({task}: TodoFormProps) => {
   const createTask = () => {
     if (task && user) {
       return {
+        id: task.id,
         userId: user.uid,
         title: form.values.title,
         completed: task.completed,

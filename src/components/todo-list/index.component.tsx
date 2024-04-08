@@ -14,8 +14,6 @@ const TodoList = ({tasks}: any) => {
   const {updateTask, deleteTask} = useTodoStore();
   const [task, setTask] = useState<Task | null>(null);
 
-  console.log('Tasks:', tasks);
-
   return (
     <>
       <FlatList
