@@ -2,15 +2,16 @@ import {
   FirebaseFirestoreTypes,
   firebase,
 } from '@react-native-firebase/firestore';
-import {Task} from '../../model/types.model';
+import {Task} from '../../../model/types.model';
 
 export const addToTasks = async (task: Task) => {
   try {
-    await firebase.firestore().collection('Tasks').add(task);
-    return true;
+    const newTask = await firebase.firestore().collection('Tasks').add(task);
+    console.log('Add new task was a success', newTask.id);
+    return newTask.id;
   } catch (error) {
     console.log('Add Task Error:', error);
-    return false;
+    return null;
   }
 };
 

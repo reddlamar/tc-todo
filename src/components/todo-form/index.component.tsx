@@ -27,6 +27,7 @@ const TodoForm = ({task}: TodoFormProps) => {
 
   const handleOnPress = () => {
     if (task) {
+      console.log('Task', task);
       todoButtonRef?.current?.updateTodoList();
       Alert.alert('The task was successfully updated!');
     } else {
@@ -68,6 +69,7 @@ const TodoForm = ({task}: TodoFormProps) => {
           onChangeText={form.handleChange('title')}
           autoCapitalize="none"
           style={styles.textInput}
+          testID="title"
         />
         {form.touched && form.errors.title && (
           <Text style={styles.text}>{form?.errors?.title}</Text>

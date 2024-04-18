@@ -12,7 +12,7 @@ export const styles = StyleSheet.create({
   appNameView: {
     justifyContent: 'center',
     alignItems: 'center',
-    marginTop: verticalScale(12),
+    marginTop: verticalScale(3),
     rowGap: verticalScale(9),
     flex: 1,
     paddingHorizontal: scale(3),

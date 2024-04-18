@@ -32,6 +32,7 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		20E21718A22F430E954CE434 /* BootSplash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D4E1F5F2A364549A1005717 /* BootSplash.storyboard */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		9B542209778AD469DE7841C9 /* Pods_todo_todoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B540087132D5286BA9A1299 /* Pods_todo_todoTests.framework */; };
 /* End PBXBuildFile section */
@@ -50,6 +51,7 @@
 		00E356EE1AD99517003FC87E /* todoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = todoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* todoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = todoTests.m; sourceTree = "<group>"; };
+		0D4E1F5F2A364549A1005717 /* BootSplash.storyboard */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = BootSplash.storyboard; path = todo/BootSplash.storyboard; sourceTree = "<group>"; };
 		127FF5D42BC27D62007AF155 /* Fontisto.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Fontisto.ttf; sourceTree = "<group>"; };
 		127FF5D52BC27D62007AF155 /* Octicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Octicons.ttf; sourceTree = "<group>"; };
 		127FF5D62BC27D62007AF155 /* Feather.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Feather.ttf; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
+				0D4E1F5F2A364549A1005717 /* BootSplash.storyboard */,
 			);
 			name = todo;
 			sourceTree = "<group>";
@@ -333,6 +336,7 @@
 				127FF5F72BC27D62007AF155 /* SimpleLineIcons.ttf in Resources */,
 				127FF5F42BC27D62007AF155 /* Zocial.ttf in Resources */,
 				12B0DD5D2BBF222500DD5DB7 /* GoogleService-Info.plist in Resources */,
+				20E21718A22F430E954CE434 /* BootSplash.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

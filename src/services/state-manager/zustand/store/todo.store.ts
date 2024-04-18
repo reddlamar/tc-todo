@@ -7,14 +7,15 @@ import {
   deleteFromTaskCollection,
   getTaskCollection,
   updateTaskCollection,
-} from '../../../firestore/todo.firestore';
+} from '../../../firebase/firestore/todo.firestore';
 
 export const useTodoStore = create<TodoState>()(set => ({
   tasks: [],
   isLoading: false,
   addTask: async (task: Task) => {
-    const isSuccess: boolean = await addToTasks(task);
-    if (isSuccess) {
+    const id: string | null = await addToTasks(task);
+    if (id) {
+      task.id = id;
       set(state => ({
         tasks: [...state.tasks, task],
       }));

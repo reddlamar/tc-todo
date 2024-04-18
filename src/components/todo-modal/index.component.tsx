@@ -22,6 +22,7 @@ const TodoModal = ({modalVisible, setModalVisible, children, title}: any) => {
             size={moderateScale(18)}
             iconColor={MD2Colors.white}
             style={styles.iconButton}
+            testID="close-btn"
           />
           <View style={styles.topContainer}>
             <Text style={styles.title}>{title}</Text>

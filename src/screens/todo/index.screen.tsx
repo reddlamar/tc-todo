@@ -33,7 +33,9 @@ const TodoScreen = () => {
           <View style={styles.container}>
             <View style={styles.topInnerContainer}>
               <View style={{backgroundColor: MD2Colors.blue600}}>
-                <Text style={styles.todayText}>Today</Text>
+                <Text style={styles.todayText} testID="today">
+                  Today
+                </Text>
                 <Text style={styles.taskCount}>
                   {tasks.length > 1
                     ? `${tasks.length} Tasks`
@@ -45,7 +47,7 @@ const TodoScreen = () => {
                   onPress={handleOnPress}
                   textColor={MD2Colors.blue600}
                   buttonColor={MD2Colors.white}
-                  buttonText="Add Task"
+                  buttonText="Add a task"
                 />
               </View>
             </View>

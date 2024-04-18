@@ -1,6 +1,6 @@
 import React from 'react';
 import {View, Text, Pressable} from 'react-native';
-import {signOut} from '../../services/firestore/auth.firestore';
+import {signOut} from '../../services/firebase/authentication/user.authentication';
 import {useUserStore} from '../../services/state-manager/zustand/store/user.store';
 import {styles} from './style.screen';
 

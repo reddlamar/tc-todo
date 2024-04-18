@@ -1,5 +1,18 @@
 import auth, {FirebaseAuthTypes} from '@react-native-firebase/auth';
 
+export const createUserWithEmailAndPassword = async (
+  email: string,
+  password: string,
+) => {
+  try {
+    const authorizedUser: FirebaseAuthTypes.UserCredential =
+      await auth().createUserWithEmailAndPassword(email, password);
+    return authorizedUser.user;
+  } catch (error) {
+    console.log('Create User With Email and Password Error:', error);
+  }
+};
+
 export const signInWithEmailAndPassword = async (
   email: string,
   password: string,

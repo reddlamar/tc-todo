@@ -1,4 +1,11 @@
-import {Pressable, Text, TextInput, View} from 'react-native';
+import {
+  Pressable,
+  Text,
+  TextInput,
+  View,
+  KeyboardAvoidingView,
+  Platform,
+} from 'react-native';
 import React from 'react';
 import {SignInProps} from '../../model/types.model';
 import {styles} from './style.component';
@@ -8,7 +15,9 @@ const SignIn = (props: SignInProps) => {
     props;
 
   return (
-    <View style={styles.view}>
+    <KeyboardAvoidingView
+      style={styles.view}
+      behavior={Platform.OS === 'ios' ? 'padding' : 'height'}>
       <View style={styles.inputView}>
         <View style={styles.inputInnerView}>
           <View style={styles.labelView}>
@@ -38,6 +47,7 @@ const SignIn = (props: SignInProps) => {
           />
         </View>
         <Pressable
+          testID="signIn"
           style={styles.button}
           accessibilityLabel="signIn"
           accessibilityRole="button"
@@ -45,7 +55,7 @@ const SignIn = (props: SignInProps) => {
           <Text style={styles.buttonText}>Sign In</Text>
         </Pressable>
       </View>
-    </View>
+    </KeyboardAvoidingView>
   );
 };
 

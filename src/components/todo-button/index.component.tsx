@@ -31,6 +31,7 @@ const TodoButton = forwardRef((props: any, ref: any) => {
   return (
     <Button
       {...props}
+      testID="task-btn"
       style={styles.addNewButton}
       labelStyle={styles.label}
       onPress={() => onPress()}>

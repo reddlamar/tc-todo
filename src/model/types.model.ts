@@ -7,7 +7,7 @@ export type SignInProps = {
 };
 
 export type Task = {
-  id?: string;
+  id: string;
   userId: number;
   title: string;
   completed: boolean;

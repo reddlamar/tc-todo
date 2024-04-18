@@ -1,6 +1,10 @@
 import React, {useCallback} from 'react';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import {SignInScreen, screenNames} from '../screens/index.screens';
+import {
+  SignInScreen,
+  SignUpScreen,
+  screenNames,
+} from '../screens/index.screens';
 import {useUserStore} from '../services/state-manager/zustand/store/user.store';
 import Tabs from './tabs/index.navigation';
 const Stack = createNativeStackNavigator();
@@ -20,6 +24,7 @@ const Navigation = () => {
     return (
       <Stack.Group>
         <Stack.Screen name={screenNames.signIn} component={SignInScreen} />
+        <Stack.Screen name={screenNames.signUp} component={SignUpScreen} />
       </Stack.Group>
     );
   }, [user]);

@@ -14,6 +14,7 @@ const TodoList = ({tasks}: TodoListProps) => {
   const [open, setOpen] = useState(false);
   const {updateTask, deleteTask} = useTodoStore();
   const [task, setTask] = useState<Task | null>(null);
+  console.log('Tasks', tasks);
 
   const renderItem = useCallback(
     ({item}: any) => (
@@ -39,6 +40,7 @@ const TodoList = ({tasks}: TodoListProps) => {
               onPress={() => {
                 updateTask({...item, ['completed']: !item.completed});
               }}
+              testID="test-checkbox"
             />
           </View>
           <View style={styles.itemTextInnerContainer}>
@@ -54,12 +56,14 @@ const TodoList = ({tasks}: TodoListProps) => {
                   setOpen(true);
                 }}
                 style={styles.iconButton}
+                testID="test-edit"
               />
               <IconButton
                 icon="delete"
                 iconColor={MD2Colors.red600}
                 style={styles.iconButton}
                 onPress={() => deleteTask(item.id)}
+                testID="test-delete"
               />
             </View>
           </View>
