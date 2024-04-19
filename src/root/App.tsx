@@ -10,6 +10,7 @@ import React, {useState} from 'react';
 import {styles} from './style';
 import {SafeAreaView, StatusBar, Animated, Image} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
+import {GestureHandlerRootView} from 'react-native-gesture-handler';
 import Navigation from '../navigation/index.navigation';
 import BootSplash from 'react-native-bootsplash';
 // import auth from '@react-native-firebase/auth';
@@ -43,7 +44,7 @@ const AnimatedBootSplash = ({onAnimationEnd}: Props) => {
 
   return (
     <Animated.View {...container} style={[container.style, {opacity}]}>
-      <Image {...logo} />
+      <Image {...logo} style={styles.image} />
     </Animated.View>
   );
 };
@@ -82,12 +83,14 @@ function App(): React.JSX.Element {
   }
 
   return (
-    <SafeAreaView style={[styles.safeView]}>
-      <StatusBar />
-      <NavigationContainer>
-        <Navigation />
-      </NavigationContainer>
-    </SafeAreaView>
+    <GestureHandlerRootView style={styles.gestureRootView}>
+      <SafeAreaView style={[styles.safeView]}>
+        <StatusBar />
+        <NavigationContainer>
+          <Navigation />
+        </NavigationContainer>
+      </SafeAreaView>
+    </GestureHandlerRootView>
   );
 }
 

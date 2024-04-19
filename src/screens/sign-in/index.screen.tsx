@@ -29,6 +29,7 @@ const SignInScreen = ({navigation}: any) => {
         width={100}
         height={100}
         source={require('../../../assets/bootsplash_logo.png')}
+        style={styles.image}
       />
       <View style={styles.appNameView}>
         <View style={styles.titleView}>

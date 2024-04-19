@@ -9,6 +9,7 @@ export const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
+  image: {borderRadius: 9},
   appNameView: {
     justifyContent: 'center',
     alignItems: 'center',

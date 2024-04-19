@@ -48,7 +48,7 @@ export const styles = StyleSheet.create({
     borderColor: MD2Colors.black,
   },
   buttonText: {
-    color: MD2Colors.black,
+    color: MD2Colors.white,
     fontSize: moderateScale(18),
   },
 });

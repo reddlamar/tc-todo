@@ -51,9 +51,13 @@ describe('Login Flow', () => {
     await element(by.text('OK')).tap();
 
     await trashIcon.tap();
-  });
 
-  // it('should show Add Task button', async () => {
-  //   await expect(element(by.id('task-btn'))).toBeVisible();
-  // });
+    const settingsTab = element(by.text('Settings'));
+    await waitFor(settingsTab).toBeVisible().withTimeout(1000);
+    await settingsTab.tap();
+
+    const signOutBtn = element(by.text('Sign Out'));
+    await waitFor(signOutBtn).toBeVisible().withTimeout(1000);
+    await signOutBtn.tap();
+  });
 });
