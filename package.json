@@ -3,13 +3,20 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "android": "react-native run-android",
-    "ios": "react-native run-ios",
+    "setStage": "ENVFILE=.env.stage",
+    "android-stage": "yarn setStage react-native run-android",
+    "ios-stage": "yarn setStage react-native run-ios --mode=Debug --scheme \"todo\" --simulator='iPhone SE (3rd generation)'",
     "lint": "eslint .",
     "start": "react-native start",
     "test": "jest",
     "e2e:test": "detox test -c ios.sim.release",
-    "e2e:build": "detox build -c ios.sim.release"
+    "e2e:build": "detox build -c ios.sim.release",
+    "setLocal": "ENVFILE=.env.local",
+    "setProduction": "ENVFILE=.env.production",
+    "ios-local": "yarn setLocal react-native run-ios --mode=Debug --scheme \"todoLocal\" --simulator='iPhone SE (3rd generation)'",
+    "ios-production": "yarn setProduction react-native run-ios --mode=Debug --scheme \"todoProduction\" --simulator='iPhone SE (3rd generation)'",
+    "android-local": "yarn setLocal react-native run-android",
+    "android-production": "yarn setProduction  react-native run-android"
   },
   "detox": {
     "test-runner": "jest",
@@ -34,6 +41,7 @@
     "react-native": "0.73.6",
     "react-native-bootsplash": "^5.5.3",
     "react-native-bouncy-checkbox": "^4.0.0",
+    "react-native-config": "^1.5.1",
     "react-native-gesture-handler": "^2.16.0",
     "react-native-paper": "^5.12.3",
     "react-native-reanimated": "^3.8.1",

@@ -16,7 +16,11 @@ const Navigation = () => {
     if (user) {
       return (
         <Stack.Group>
-          <Stack.Screen name={'Tabs'} component={Tabs} />
+          <Stack.Screen
+            options={{headerShown: false}}
+            name={'Tabs'}
+            component={Tabs}
+          />
         </Stack.Group>
       );
     }

@@ -10,6 +10,17 @@ exports[`Rendering App renders correctly 1`] = `
     ]
   }
 >
+  <View
+    style={
+      {
+        "alignItems": "center",
+      }
+    }
+  >
+    <Text>
+      Environment: 
+    </Text>
+  </View>
   <RNCSafeAreaProvider
     onInsetsChange={[Function]}
     style={
@@ -100,156 +111,16 @@ exports[`Rendering App renders correctly 1`] = `
               }
             >
               <View
+                onLayout={[Function]}
                 style={
-                  {
-                    "alignItems": "center",
-                    "flex": 1,
-                    "justifyContent": "center",
-                    "marginTop": 23.541176470588233,
-                    "paddingHorizontal": 6.428571428571429,
-                    "rowGap": 17.655882352941177,
-                  }
-                }
-              >
-                <View
-                  style={
+                  [
                     {
-                      "alignItems": "center",
-                      "columnGap": 12.857142857142858,
-                      "flexDirection": "row",
-                      "justifyContent": "center",
-                    }
-                  }
-                >
-                  <Text
-                    style={
-                      [
-                        {
-                          "color": "#e53935",
-                        },
-                        {
-                          "fontSize": 47.14285714285714,
-                          "fontWeight": "bold",
-                        },
-                      ]
-                    }
-                  >
-                    LR
-                  </Text>
-                  <Text
-                    style={
-                      [
-                        {
-                          "color": "#43a047",
-                        },
-                        {
-                          "fontSize": 47.14285714285714,
-                          "fontWeight": "bold",
-                        },
-                      ]
-                    }
-                  >
-                    To
-                  </Text>
-                  <Text
-                    style={
-                      [
-                        {
-                          "color": "#000000",
-                        },
-                        {
-                          "fontSize": 47.14285714285714,
-                          "fontWeight": "bold",
-                        },
-                      ]
-                    }
-                  >
-                    Do
-                  </Text>
-                </View>
-                <Text
-                  style={
+                      "flex": 1,
+                    },
                     {
-                      "fontSize": 37.714285714285715,
-                      "fontWeight": "600",
-                      "textAlign": "center",
-                    }
-                  }
-                >
-                  The app that will help you manage your tasks.
-                </Text>
-                <View
-                  style={
-                    {
-                      "flexDirection": "row",
-                    }
-                  }
-                >
-                  <View
-                    accessibilityState={
-                      {
-                        "busy": undefined,
-                        "checked": undefined,
-                        "disabled": undefined,
-                        "expanded": undefined,
-                        "selected": undefined,
-                      }
-                    }
-                    accessibilityValue={
-                      {
-                        "max": undefined,
-                        "min": undefined,
-                        "now": undefined,
-                        "text": undefined,
-                      }
-                    }
-                    accessible={true}
-                    collapsable={false}
-                    focusable={true}
-                    onBlur={[Function]}
-                    onClick={[Function]}
-                    onFocus={[Function]}
-                    onResponderGrant={[Function]}
-                    onResponderMove={[Function]}
-                    onResponderRelease={[Function]}
-                    onResponderTerminate={[Function]}
-                    onResponderTerminationRequest={[Function]}
-                    onStartShouldSetResponder={[Function]}
-                  >
-                    <Text
-                      style={
-                        [
-                          {
-                            "fontSize": 23.57142857142857,
-                            "fontWeight": "600",
-                          },
-                          {
-                            "color": "#1e88e5",
-                            "textDecorationLine": "underline",
-                          },
-                        ]
-                      }
-                    >
-                      Sign Up
-                    </Text>
-                  </View>
-                  <Text
-                    style={
-                      {
-                        "fontSize": 23.57142857142857,
-                        "fontWeight": "600",
-                      }
-                    }
-                  >
-                    Today.
-                  </Text>
-                </View>
-              </View>
-              <View
-                style={
-                  {
-                    "flex": 1,
-                  }
+                      "paddingBottom": 0,
+                    },
+                  ]
                 }
               >
                 <View
@@ -409,11 +280,12 @@ exports[`Rendering App renders correctly 1`] = `
                         "width": 642.8571428571429,
                       }
                     }
+                    testID="signIn"
                   >
                     <Text
                       style={
                         {
-                          "color": "#000000",
+                          "color": "#ffffff",
                           "fontSize": 28.285714285714285,
                         }
                       }
@@ -421,6 +293,647 @@ exports[`Rendering App renders correctly 1`] = `
                       Sign In
                     </Text>
                   </View>
+                </View>
+              </View>
+              <Image
+                height={100}
+                source={
+                  {
+                    "testUri": "../../../assets/bootsplash_logo.png",
+                  }
+                }
+                style={
+                  {
+                    "borderRadius": 9,
+                  }
+                }
+                width={100}
+              />
+              <View
+                style={
+                  {
+                    "alignItems": "center",
+                    "flex": 1,
+                    "justifyContent": "center",
+                    "marginTop": 5.885294117647058,
+                    "paddingHorizontal": 6.428571428571429,
+                    "rowGap": 17.655882352941177,
+                  }
+                }
+              >
+                <View
+                  style={
+                    {
+                      "alignItems": "center",
+                      "columnGap": 12.857142857142858,
+                      "flexDirection": "row",
+                      "justifyContent": "center",
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      [
+                        {
+                          "color": "#e53935",
+                        },
+                        {
+                          "fontSize": 47.14285714285714,
+                          "fontWeight": "bold",
+                        },
+                      ]
+                    }
+                  >
+                    LR
+                  </Text>
+                  <Text
+                    style={
+                      [
+                        {
+                          "color": "#43a047",
+                        },
+                        {
+                          "fontSize": 47.14285714285714,
+                          "fontWeight": "bold",
+                        },
+                      ]
+                    }
+                  >
+                    To
+                  </Text>
+                  <Text
+                    style={
+                      [
+                        {
+                          "color": "#000000",
+                        },
+                        {
+                          "fontSize": 47.14285714285714,
+                          "fontWeight": "bold",
+                        },
+                      ]
+                    }
+                  >
+                    Do
+                  </Text>
+                </View>
+                <Text
+                  style={
+                    {
+                      "fontSize": 37.714285714285715,
+                      "fontWeight": "600",
+                      "textAlign": "center",
+                    }
+                  }
+                  testID="app-description"
+                >
+                  The app that will help you manage your tasks.
+                </Text>
+                <View
+                  style={
+                    {
+                      "flexDirection": "row",
+                    }
+                  }
+                >
+                  <View
+                    accessibilityState={
+                      {
+                        "busy": undefined,
+                        "checked": undefined,
+                        "disabled": undefined,
+                        "expanded": undefined,
+                        "selected": undefined,
+                      }
+                    }
+                    accessibilityValue={
+                      {
+                        "max": undefined,
+                        "min": undefined,
+                        "now": undefined,
+                        "text": undefined,
+                      }
+                    }
+                    accessible={true}
+                    collapsable={false}
+                    focusable={true}
+                    onBlur={[Function]}
+                    onClick={[Function]}
+                    onFocus={[Function]}
+                    onResponderGrant={[Function]}
+                    onResponderMove={[Function]}
+                    onResponderRelease={[Function]}
+                    onResponderTerminate={[Function]}
+                    onResponderTerminationRequest={[Function]}
+                    onStartShouldSetResponder={[Function]}
+                  >
+                    <Text
+                      style={
+                        [
+                          {
+                            "fontSize": 23.57142857142857,
+                            "fontWeight": "600",
+                          },
+                          {
+                            "color": "#1e88e5",
+                            "textDecorationLine": "underline",
+                          },
+                        ]
+                      }
+                    >
+                      Sign Up
+                    </Text>
+                  </View>
+                  <Text
+                    style={
+                      {
+                        "fontSize": 23.57142857142857,
+                        "fontWeight": "600",
+                      }
+                    }
+                  >
+                    Today.
+                  </Text>
+                </View>
+              </View>
+            </View>
+          </View>
+        </View>
+        <RNSScreenStackHeaderConfig
+          backButtonInCustomView={false}
+          backTitleVisible={true}
+          backgroundColor="rgb(255, 255, 255)"
+          color="rgb(0, 122, 255)"
+          direction="ltr"
+          disableBackButtonMenu={false}
+          hidden={false}
+          hideBackButton={false}
+          largeTitleHideShadow={false}
+          title="Sign In"
+          titleColor="rgb(28, 28, 30)"
+          topInsetEnabled={false}
+          translucent={false}
+        />
+      </RNSScreen>
+    </RNSScreenStack>
+  </RNCSafeAreaProvider>
+</RCTSafeAreaView>
+`;
+
+exports[`Rendering App renders snapshot 1`] = `
+<RCTSafeAreaView
+  style={
+    [
+      {
+        "flex": 1,
+      },
+    ]
+  }
+>
+  <View
+    style={
+      {
+        "alignItems": "center",
+      }
+    }
+  >
+    <Text>
+      Environment: 
+    </Text>
+  </View>
+  <RNCSafeAreaProvider
+    onInsetsChange={[Function]}
+    style={
+      [
+        {
+          "flex": 1,
+        },
+        undefined,
+      ]
+    }
+  >
+    <RNSScreenStack
+      style={
+        {
+          "flex": 1,
+        }
+      }
+    >
+      <RNSScreen
+        collapsable={false}
+        gestureResponseDistance={
+          {
+            "bottom": -1,
+            "end": -1,
+            "start": -1,
+            "top": -1,
+          }
+        }
+        nativeBackButtonDismissalEnabled={false}
+        onAppear={[Function]}
+        onDisappear={[Function]}
+        onDismissed={[Function]}
+        onGestureCancel={[Function]}
+        onHeaderBackButtonClicked={[Function]}
+        onNativeDismissCancelled={[Function]}
+        onTransitionProgress={[Function]}
+        onWillDisappear={[Function]}
+        replaceAnimation="push"
+        sheetAllowedDetents="large"
+        sheetCornerRadius={-1}
+        sheetExpandsWhenScrolledToEdge={true}
+        sheetGrabberVisible={false}
+        sheetLargestUndimmedDetent="all"
+        stackPresentation="push"
+        style={
+          {
+            "bottom": 0,
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          }
+        }
+        swipeDirection="horizontal"
+      >
+        <View
+          accessibilityElementsHidden={false}
+          importantForAccessibility="auto"
+          style={
+            {
+              "flex": 1,
+              "flexDirection": "column-reverse",
+            }
+          }
+        >
+          <View
+            collapsable={false}
+            style={
+              [
+                {
+                  "flex": 1,
+                },
+                {
+                  "backgroundColor": "rgb(242, 242, 242)",
+                },
+                undefined,
+              ]
+            }
+          >
+            <View
+              style={
+                {
+                  "alignItems": "center",
+                  "backgroundColor": "#ffffff",
+                  "flex": 1,
+                  "justifyContent": "center",
+                }
+              }
+            >
+              <View
+                onLayout={[Function]}
+                style={
+                  [
+                    {
+                      "flex": 1,
+                    },
+                    {
+                      "paddingBottom": 0,
+                    },
+                  ]
+                }
+              >
+                <View
+                  style={
+                    {
+                      "alignItems": "center",
+                      "backgroundColor": "#ffffff",
+                      "borderColor": "#e53935",
+                      "borderRadius": 14.142857142857142,
+                      "borderWidth": 6.428571428571429,
+                      "paddingBottom": 23.541176470588233,
+                      "paddingHorizontal": 32.14285714285714,
+                      "paddingTop": 23.541176470588233,
+                      "rowGap": 17.655882352941177,
+                      "width": 707.1428571428571,
+                    }
+                  }
+                >
+                  <View
+                    style={
+                      {
+                        "alignItems": "center",
+                        "justifyContent": "center",
+                      }
+                    }
+                  >
+                    <View
+                      style={
+                        {
+                          "alignSelf": "flex-start",
+                        }
+                      }
+                    >
+                      <Text
+                        style={
+                          {
+                            "color": "#000000",
+                            "fontSize": 23.57142857142857,
+                            "fontWeight": "600",
+                          }
+                        }
+                      >
+                        Email
+                      </Text>
+                    </View>
+                    <TextInput
+                      autoCapitalize="none"
+                      onChangeText={[Function]}
+                      style={
+                        {
+                          "backgroundColor": "#ffffff",
+                          "borderColor": "#000000",
+                          "borderRadius": 9.428571428571429,
+                          "borderWidth": 2.142857142857143,
+                          "color": "#000000",
+                          "height": 64.73823529411764,
+                          "marginVertical": 17.655882352941177,
+                          "paddingHorizontal": 19.285714285714285,
+                          "width": 642.8571428571429,
+                        }
+                      }
+                      testID="emailInput"
+                      textContentType="emailAddress"
+                      value=""
+                    />
+                  </View>
+                  <View
+                    style={
+                      {
+                        "alignItems": "center",
+                        "justifyContent": "center",
+                      }
+                    }
+                  >
+                    <View
+                      style={
+                        {
+                          "alignSelf": "flex-start",
+                        }
+                      }
+                    >
+                      <Text
+                        style={
+                          {
+                            "color": "#000000",
+                            "fontSize": 23.57142857142857,
+                            "fontWeight": "600",
+                          }
+                        }
+                      >
+                        Password
+                      </Text>
+                    </View>
+                    <TextInput
+                      autoCapitalize="none"
+                      onChangeText={[Function]}
+                      secureTextEntry={true}
+                      style={
+                        {
+                          "backgroundColor": "#ffffff",
+                          "borderColor": "#000000",
+                          "borderRadius": 9.428571428571429,
+                          "borderWidth": 2.142857142857143,
+                          "color": "#000000",
+                          "height": 64.73823529411764,
+                          "marginVertical": 17.655882352941177,
+                          "paddingHorizontal": 19.285714285714285,
+                          "width": 642.8571428571429,
+                        }
+                      }
+                      testID="passwordInput"
+                      textContentType="password"
+                      value=""
+                    />
+                  </View>
+                  <View
+                    accessibilityLabel="signIn"
+                    accessibilityRole="button"
+                    accessibilityState={
+                      {
+                        "busy": undefined,
+                        "checked": undefined,
+                        "disabled": undefined,
+                        "expanded": undefined,
+                        "selected": undefined,
+                      }
+                    }
+                    accessibilityValue={
+                      {
+                        "max": undefined,
+                        "min": undefined,
+                        "now": undefined,
+                        "text": undefined,
+                      }
+                    }
+                    accessible={true}
+                    collapsable={false}
+                    focusable={true}
+                    onBlur={[Function]}
+                    onClick={[Function]}
+                    onFocus={[Function]}
+                    onResponderGrant={[Function]}
+                    onResponderMove={[Function]}
+                    onResponderRelease={[Function]}
+                    onResponderTerminate={[Function]}
+                    onResponderTerminationRequest={[Function]}
+                    onStartShouldSetResponder={[Function]}
+                    style={
+                      {
+                        "alignItems": "center",
+                        "backgroundColor": "#43a047",
+                        "borderColor": "#000000",
+                        "borderRadius": 9.428571428571429,
+                        "borderWidth": 2.142857142857143,
+                        "height": 82.39411764705882,
+                        "justifyContent": "center",
+                        "width": 642.8571428571429,
+                      }
+                    }
+                    testID="signIn"
+                  >
+                    <Text
+                      style={
+                        {
+                          "color": "#ffffff",
+                          "fontSize": 28.285714285714285,
+                        }
+                      }
+                    >
+                      Sign In
+                    </Text>
+                  </View>
+                </View>
+              </View>
+              <Image
+                height={100}
+                source={
+                  {
+                    "testUri": "../../../assets/bootsplash_logo.png",
+                  }
+                }
+                style={
+                  {
+                    "borderRadius": 9,
+                  }
+                }
+                width={100}
+              />
+              <View
+                style={
+                  {
+                    "alignItems": "center",
+                    "flex": 1,
+                    "justifyContent": "center",
+                    "marginTop": 5.885294117647058,
+                    "paddingHorizontal": 6.428571428571429,
+                    "rowGap": 17.655882352941177,
+                  }
+                }
+              >
+                <View
+                  style={
+                    {
+                      "alignItems": "center",
+                      "columnGap": 12.857142857142858,
+                      "flexDirection": "row",
+                      "justifyContent": "center",
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      [
+                        {
+                          "color": "#e53935",
+                        },
+                        {
+                          "fontSize": 47.14285714285714,
+                          "fontWeight": "bold",
+                        },
+                      ]
+                    }
+                  >
+                    LR
+                  </Text>
+                  <Text
+                    style={
+                      [
+                        {
+                          "color": "#43a047",
+                        },
+                        {
+                          "fontSize": 47.14285714285714,
+                          "fontWeight": "bold",
+                        },
+                      ]
+                    }
+                  >
+                    To
+                  </Text>
+                  <Text
+                    style={
+                      [
+                        {
+                          "color": "#000000",
+                        },
+                        {
+                          "fontSize": 47.14285714285714,
+                          "fontWeight": "bold",
+                        },
+                      ]
+                    }
+                  >
+                    Do
+                  </Text>
+                </View>
+                <Text
+                  style={
+                    {
+                      "fontSize": 37.714285714285715,
+                      "fontWeight": "600",
+                      "textAlign": "center",
+                    }
+                  }
+                  testID="app-description"
+                >
+                  The app that will help you manage your tasks.
+                </Text>
+                <View
+                  style={
+                    {
+                      "flexDirection": "row",
+                    }
+                  }
+                >
+                  <View
+                    accessibilityState={
+                      {
+                        "busy": undefined,
+                        "checked": undefined,
+                        "disabled": undefined,
+                        "expanded": undefined,
+                        "selected": undefined,
+                      }
+                    }
+                    accessibilityValue={
+                      {
+                        "max": undefined,
+                        "min": undefined,
+                        "now": undefined,
+                        "text": undefined,
+                      }
+                    }
+                    accessible={true}
+                    collapsable={false}
+                    focusable={true}
+                    onBlur={[Function]}
+                    onClick={[Function]}
+                    onFocus={[Function]}
+                    onResponderGrant={[Function]}
+                    onResponderMove={[Function]}
+                    onResponderRelease={[Function]}
+                    onResponderTerminate={[Function]}
+                    onResponderTerminationRequest={[Function]}
+                    onStartShouldSetResponder={[Function]}
+                  >
+                    <Text
+                      style={
+                        [
+                          {
+                            "fontSize": 23.57142857142857,
+                            "fontWeight": "600",
+                          },
+                          {
+                            "color": "#1e88e5",
+                            "textDecorationLine": "underline",
+                          },
+                        ]
+                      }
+                    >
+                      Sign Up
+                    </Text>
+                  </View>
+                  <Text
+                    style={
+                      {
+                        "fontSize": 23.57142857142857,
+                        "fontWeight": "600",
+                      }
+                    }
+                  >
+                    Today.
+                  </Text>
                 </View>
               </View>
             </View>

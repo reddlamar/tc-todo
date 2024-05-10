@@ -9,13 +9,7 @@ describe('Login Flow', () => {
   //   await device.reloadReactNative();
   // });
 
-  // it('should display The app that will help you manage your tasks.', async () => {
-  //   await expect(
-  //     element(by.text('The app that will help you manage your tasks.')),
-  //   ).toBeVisible();
-  // });
-
-  it('should login successfully', async () => {
+  it('should sign in, add a task, update a task, delete a task, and sign out', async () => {
     await element(by.id('emailInput')).typeText('lamar@gmail.com');
     await element(by.id('passwordInput')).typeText('123456');
 

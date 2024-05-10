@@ -15,7 +15,7 @@ import renderer, {act} from 'react-test-renderer';
 jest.mock('react-native/Libraries/EventEmitter/NativeEventEmitter');
 
 describe('Rendering App', () => {
-  it('renders correctly', async () => {
+  it('renders snapshot', async () => {
     let wrapper: any;
     await act(async () => {
       wrapper = renderer.create(<App />);

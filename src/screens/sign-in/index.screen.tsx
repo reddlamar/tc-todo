@@ -3,17 +3,18 @@ import React, {useState} from 'react';
 import SignIn from '../../components/sign-in/index.component';
 import {signInWithEmailAndPassword} from '../../services/firebase/authentication/user.authentication';
 import {styles} from './style.screen';
-import {useUserStore} from '../../services/state-manager/zustand/store/user.store';
+// import {useUserStore} from '../../services/state-manager/zustand/store/user.store';
 import {screenNames} from '../index.screens';
 
 const SignInScreen = ({navigation}: any) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const {setUser} = useUserStore();
+  // const {setUser} = useUserStore();
 
   const handleSignIn = async () => {
-    const user = await signInWithEmailAndPassword(email, password);
-    setUser(user);
+    await signInWithEmailAndPassword(email, password);
+    // const user = await signInWithEmailAndPassword(email, password);
+    // setUser(user);
   };
 
   return (

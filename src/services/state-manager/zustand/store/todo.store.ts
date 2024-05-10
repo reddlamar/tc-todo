@@ -1,5 +1,5 @@
 import {create} from 'zustand';
-import {update} from '../helpers/todo.helpers';
+import {add, remove, update} from '../helpers/todo.helpers';
 import {TodoState} from '../../../../model/interfaces.model';
 import {Task} from '../../../../model/types.model';
 import {
@@ -13,13 +13,21 @@ export const useTodoStore = create<TodoState>()(set => ({
   tasks: [],
   isLoading: false,
   addTask: async (task: Task) => {
+    set(() => ({
+      isLoading: true,
+    }));
+
     const id: string | null = await addToTasks(task);
     if (id) {
       task.id = id;
       set(state => ({
-        tasks: [...state.tasks, task],
+        tasks: add(state.tasks, task),
       }));
     }
+
+    set(() => ({
+      isLoading: false,
+    }));
   },
   getTasks: async (userId: string) => {
     set(() => ({
@@ -45,7 +53,7 @@ export const useTodoStore = create<TodoState>()(set => ({
     const isUpdated = await updateTaskCollection(task);
     if (isUpdated) {
       set(state => {
-        const updatedTasks = update(state, task);
+        const updatedTasks = update(state.tasks, task);
         return {tasks: updatedTasks};
       });
     }
@@ -62,8 +70,8 @@ export const useTodoStore = create<TodoState>()(set => ({
     const isDeleted = await deleteFromTaskCollection(id);
     if (isDeleted) {
       set(state => {
-        const filteredTasks = state.tasks.filter(t => t.id !== id);
-        return {tasks: filteredTasks};
+        // const filteredTasks = state.tasks.filter(t => t.id !== id);
+        return {tasks: remove(state.tasks, id)};
       });
     }
 

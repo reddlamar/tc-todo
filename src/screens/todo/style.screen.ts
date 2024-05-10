@@ -60,6 +60,6 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
     rowGap: 6,
   },
-  loadingView: {justifyContent: 'center', alignItems: 'center'},
+  loadingView: {flex: 1, justifyContent: 'center', alignItems: 'center'},
   emptyText: {fontSize: 30, fontWeight: 'bold', color: MD2Colors.blue600},
 });
